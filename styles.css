@@ -1,0 +1,133 @@
+/* ============= Main styles ============= */
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+/* Portfolio items created using Grid styling in CSS*/
+.container{
+    display: grid;
+    /*want container to use grid and to create the template with 1 fractional unit (100%)
+      Nav bar then is able to go left-right end-to-end*/
+    grid-template-columns: 1fr; 
+}
+
+
+/* ============= Navigation Bar styles ============= */
+/* Navigation bas is created using Flex Box styling in CSS */
+.nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+}
+
+.left-side{
+    display: flex;
+}
+
+/* Way to traverse div tree
+   From nav-wrapper to left-side the style is applied to
+   divs in left-side branch*/
+.nav-wrapper > .left-side > div{
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.nav-link-wrapper{
+    height: 22px;
+    /* the two lines below give a line detail that fades when clicked or hovered on*/
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+/*Inside the .nav-link-wrapper with the a link*/
+.nav-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none; /*Removes the hyperlink underline*/
+    transition: color 0.5s; /*animating the color of the link*/
+}
+
+/*Using pseudo-state hover on class .nav-link-wrapper*/
+.nav-link-wrapper:hover{
+    border-bottom: 1px solid black;
+}
+
+/*Using pseudo-state hover on class .nav-link-wrapper link*/
+.nav-link-wrapper a:hover{
+    color: black;
+}
+
+/* ============= Portfolio Items styles ============= */
+.portfolio-items-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-item-wrapper{
+    position: relative; /*allows flexibility with each item inside it*/
+} /*relative is required to have absolute elements nested in it 
+like the .img-text-wrapper position*/
+
+.portfolio-img-background{
+    height: 300px;
+    width: 100%;
+    background-size: cover; /*crops images in this so they sit nicely next to each other*/
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper{
+    position: absolute; /*forcing element to be where it does not usually go*/
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*left to right*/
+    align-items: center; /*top to bottom*/
+    height: 100%;
+    text-align:center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.logo-wrapper img{
+    width: 40%;
+    margin-bottom: 10px;
+}
+
+/* TODO ------ Needs to be more specific with selector*/
+.img-text-wrapper .subtitle{
+    transition: 1s;
+    font-weight: 600;
+    color: transparent;
+}
+.img-text-wrapper:hover .subtitle{
+    font-weight: 600;
+    color: lightcoral;
+}
+
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+/*About page style*/
+.two-column-wrapper{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile-img-wrapper img{
+    width:50%;
+    padding-left: 30%;
+}
+
+.profile-content-wrapper {
+    padding: 30px;
+}
+
+.profile-content-wrapper h1{
+    color: lightcoral;
+}

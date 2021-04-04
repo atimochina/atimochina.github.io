@@ -1,0 +1,24 @@
+Notes on website project
+
+TODOs
+
+1. Build the project ------------ DONE
+    - creating the folder
+    - adding the files
+    - linking the files
+
+2. Navbar ----------------------- DONE
+    - 2 links and the name
+
+3. Portfolio item grid ---------- DONE
+    - images
+    - titles
+    - descriptions
+    - animations
+    - javascript
+
+4. About page ------------------- DONE
+    - images
+    - split column layout
+    - content
+
