@@ -58,10 +58,19 @@ body{
     color: black;
 }
 
+.active-nav-link {
+    border-bottom: 1px solid black;
+}
+
+.active-nav-link a{
+    color: black !important;
+}
+
 /* ============= Portfolio Items styles ============= */
 .portfolio-items-wrapper{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /*grid-template-columns: 1fr 1fr 1fr;*/
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .portfolio-item-wrapper{
@@ -116,12 +125,13 @@ like the .img-text-wrapper position*/
     display:grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 1fr 1fr;
+    /*grid-template-columns: 1fr 1fr;*/
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .profile-img-wrapper img{
-    width:50%;
-    padding-left: 30%;
+    width: 400px;
+    padding-left: 10%;
 }
 
 .profile-content-wrapper {

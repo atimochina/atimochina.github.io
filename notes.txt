@@ -22,3 +22,11 @@ TODOs
     - split column layout
     - content
 
+TODOs
+
+1. fix logo so that it always is the same size
+    - quick fix is to make sure descriptions are 
+      always two lines
+
+        - temporary solution was to use autofit repeat option with grid-template-layouts
+    
